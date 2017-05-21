@@ -2,10 +2,28 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	bottom: 0;
+	bottom: 10px;
 	width: 10px;
 	z-index: 4;
-	background-color: red;
 	opacity: 0.7;
 	pointer-events: none;
+
+	.scroll-marker-layer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		.scroll-marker{
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 1px;
+
+			background-color: #ffdd00;
+			border: 1px solid #ccaa00;
+			box-sizing: content-box;
+		}
+	}
 }
