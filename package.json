@@ -1,22 +1,23 @@
 {
-  "name": "scroll-marker",
-  "main": "./lib/scroll-marker",
-  "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
-  "repository": "https://github.com/atom/scroll-marker",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-	"consumedServices": {
-		"find-and-replace": {
-			"versions": {
-				"0.0.1": "consumeSearch"
-			}
-		}
+	"name": "scroll-marker",
+	"main": "./lib/main",
+	"version": "0.1.0",
+	"description": "A short description of your package",
+	"keywords": [
+	],
+	"repository": "https://github.com/atom/scroll-marker",
+	"license": "MIT",
+	"engines": {
+		"atom": ">=1.0.0 <2.0.0"
 	},
-  "dependencies": {
-  }
+	"providedServices": {
+    "scroll-marker": {
+      "versions": {
+        "0.1.0": "provideService"
+      }
+    }
+	},
+	"dependencies": {
+		"etch": "0.9.3"
+	}
 }
