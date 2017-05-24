@@ -17,7 +17,6 @@
     }
   },
   "dependencies": {
-    "etch": "0.9.3",
-    "tinycolor2": "^1.4.1"
+    "etch": "0.9.3"
   }
 }
