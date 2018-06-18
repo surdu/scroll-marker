@@ -1,11 +1,11 @@
 {
   "name": "scroll-marker",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Provides annotation functionality for the scroll bar",
   "keywords": [
-		"scroll annotation"
-	],
+    "scroll annotation"
+  ],
   "repository": "https://github.com/surdu/scroll-marker",
   "license": "MIT",
   "engines": {
