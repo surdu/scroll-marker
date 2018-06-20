@@ -6,7 +6,7 @@ This is a base package for [Atom](https://atom.io/) that provides the base funct
 
 That means, in order to get any use out of it, you also need to install one of the packages bellow.
 
-## Scroll marker packages:
+## Scroll Marker packages:
 
  - [find-scroll-marker](https://atom.io/packages/find-scroll-marker) - marks Find & Replace results
 

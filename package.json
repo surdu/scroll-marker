@@ -4,7 +4,7 @@
   "version": "0.1.1",
   "description": "Provides annotation functionality for the scroll bar",
   "keywords": [
-    "scroll annotation"
+    "scroll annotation", "highlight results"
   ],
   "repository": "https://github.com/surdu/scroll-marker",
   "license": "MIT",
