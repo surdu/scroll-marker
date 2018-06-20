@@ -1,14 +1,17 @@
 # Scroll Marker
 
-This is a base package for [Atom](https://atom.io/) that provides the base functionality for other plugins (see list below) to overlay markers on the editor's scrollbar.
+This is a base package for [Atom](https://atom.io/) that provides the functionality for other atom packages (see list below) to overlay markers on the editor's scrollbar.
 
-<img width="86" alt="screen shot 2018-06-18 at 20 52 17" src="https://user-images.githubusercontent.com/11520795/41553150-91ad9a6c-7339-11e8-923a-b9b57343ce77.png">
+<img width="664" alt="screen shot 2018-06-20 at 21 51 40" src="https://user-images.githubusercontent.com/11520795/41678646-40497f28-74d4-11e8-8625-d043f96e9bb8.png">
 
 That means, in order to get any use out of it, you also need to install one of the packages bellow.
 
-## Scroll Marker packages:
+## Packages powered by Scroll Marker:
 
- - [find-scroll-marker](https://atom.io/packages/find-scroll-marker) - marks Find & Replace results
+Name | What it highlight
+-----|------------------
+ [find-scroll-marker](https://atom.io/packages/find-scroll-marker) | search results
+ [lint-scroll-marker](https://atom.io/packages/lint-scroll-marker) | lint errors found by [linter](https://atom.io/packages/linter)
 
 ## API documentation
 
