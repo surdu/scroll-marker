@@ -8,7 +8,7 @@ That means, in order to get any use out of it, you also need to install one of t
 
 ## Packages powered by Scroll Marker:
 
-Name | What it highlight
+Name | What it highlights
 -----|------------------
  [find-scroll-marker](https://atom.io/packages/find-scroll-marker) | search results
  [lint-scroll-marker](https://atom.io/packages/lint-scroll-marker) | lint errors found by [linter](https://atom.io/packages/linter)
