@@ -1,7 +1,7 @@
 {
   "name": "scroll-marker",
   "main": "./lib/main",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides annotation functionality for the scroll bar",
   "keywords": [
     "scroll annotation",
