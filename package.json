@@ -3,6 +3,9 @@
   "main": "./lib/main",
   "version": "0.1.2",
   "description": "Provides annotation functionality for the scroll bar",
+  "scripts": {
+    "spellcheck": "npx yaspeller '*.md' --config yaspeller.json --ignore-urls"
+  },
   "keywords": [
     "scroll annotation",
     "highlight results",
