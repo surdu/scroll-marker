@@ -128,3 +128,4 @@ consumeScrollMarker(api) {
 ```
 
 For a detailed `syncToMarkerLayer` working example you can checkout the [find-scroll-marker](https://github.com/surdu/find-scroll-marker) source code.
+
