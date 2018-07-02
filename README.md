@@ -50,9 +50,8 @@ module.exports = {
     // ...
   },
 
-  consumeScrollMarker(scrollMarkerAPI) {
-    const markerLayer = scrollMarkerAPI.getLayer(editor, "example-layer", "#00ff00");
-    markerLayer.addMarker(2); //adds marker for line 3
+  consumeScrollMarker(api) {
+    // Use `api` here
   },
 
   deactivate() {
@@ -61,11 +60,11 @@ module.exports = {
 };
 ```
 
-This gives you a reference to the scroll-marker API that you can use to add a [`Marker Layer`](#marker-layer) to the editor's scroll bar. [`Marker Layer`](#marker-layer) is the component responsible with managing the markers on the scroll bar.
+This will give you the reference to the scroll-marker API.
 
 ## API
 
-#### getLayer(editor, name, color)
+### getLayer(editor, name, color)
 
 Creates and returns a singleton instance of [`Marker Layer`](#marker-layer). That means there will be only one instance of [`Marker Layer`](#marker-layer) for a given editor/name combination.
 
@@ -79,16 +78,16 @@ This [`Marker Layer`](#marker-layer) instance is what you'll use to add/remove m
 **_Example:_**
 ```js
 consumeScrollMarker(api) {
-	atom.workspace.observeTextEditors(function(editor) {
-		const layer = api.getLayer(editor, "example-layer", "#00ff00");
-		// ...
-	});
+  atom.workspace.observeTextEditors(function(editor) {
+    const layer = api.getLayer(editor, "example-layer", "#00ff00");
+    // ...
+  });
 }
 ```
 
 ## Marker Layer
 
-#### addMarker(line)
+### addMarker(line)
 
 Adds a marker on the marker layer at the specified line.
 
@@ -99,16 +98,16 @@ Adds a marker on the marker layer at the specified line.
 **_Example:_**
 ```js
 consumeScrollMarker(api) {
-	atom.workspace.observeTextEditors(function(editor) {
-		const layer = api.getLayer(editor, "example-layer", "#00ff00");
-		layer.addMarker(2);
-	});
+  atom.workspace.observeTextEditors(function(editor) {
+    const layer = api.getLayer(editor, "example-layer", "#00ff00");
+    layer.addMarker(2);
+  });
 }
 ```
 
 ---
 
-#### syncToMarkerLayer(markerLayer)
+### syncToMarkerLayer(markerLayer)
 
 Sync the markers on the scroll marker layer with the markers on a [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer)
 
@@ -118,13 +117,14 @@ Sync the markers on the scroll marker layer with the markers on a [DisplayMarker
 **_Example:_**
 ```js
 consumeScrollMarker(api) {
-	atom.workspace.observeTextEditors(function(editor) {
-		const scrollLayer = api.getLayer(editor, "example-layer", "#00ff00");
-		const searchLayer = findService.resultsMarkerLayerForTextEditor(editor);
+  atom.workspace.observeTextEditors(function(editor) {
+    const scrollLayer = api.getLayer(editor, "example-layer", "#00ff00");
+    // `findApi` was obtained similarly to `api` but from find-and-replace package
+    const searchLayer = findApi.resultsMarkerLayerForTextEditor(editor);
 
-		scrollLayer.syncToMarkerLayer(searchLayer);
-	});
+    scrollLayer.syncToMarkerLayer(searchLayer);
+  });
 }
 ```
 
-For a detailed `syncToMarkerLayer` working example you could checkout the [find-scroll-marker](https://github.com/surdu/find-scroll-marker) source code.
+For a detailed `syncToMarkerLayer` working example you can checkout the [find-scroll-marker](https://github.com/surdu/find-scroll-marker) source code.
