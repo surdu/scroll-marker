@@ -3,6 +3,10 @@
   "main": "./lib/main",
   "version": "0.1.2",
   "description": "Provides annotation functionality for the scroll bar",
+  "scripts": {
+    "spellcheck": "npx yaspeller '{,!(node_modules)/**/}*.md' --config yaspeller.json --ignore-urls",
+    "test": "npx eslint **/*.js && npm run spellcheck"
+  },
   "keywords": [
     "scroll annotation",
     "highlight results",
@@ -22,6 +26,10 @@
     }
   },
   "dependencies": {
-    "etch": "0.9.3"
+    "etch": "~0.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "yaspeller": "^4.1.0"
   }
 }

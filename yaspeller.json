@@ -1,0 +1,11 @@
+{
+	"format": "markdown",
+	"dictionary": [
+		"[A-Z].*",
+		"linter",
+		"nuclide",
+		"js",
+		"ui",
+		"ide"
+	]
+}
