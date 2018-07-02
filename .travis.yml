@@ -4,6 +4,5 @@ install:
   - nvm install node
 
 script:
-  - npx eslint **/*.js
-  - npm run spellcheck
-  - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+  # - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+  - npm test

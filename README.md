@@ -1,10 +1,13 @@
 # Scroll Marker
 
-This is a base package for [Atom](https://atom.io/) that provides the functionality for other atom packages (see list below) to overlay markers on the editor's scroll bar.
+[![Build Status](https://travis-ci.org/surdu/scroll-marker.svg?branch=master)](https://travis-ci.org/surdu/scroll-marker)
+[![dependencies Status](https://david-dm.org/surdu/scroll-marker/status.svg)](https://david-dm.org/surdu/scroll-marker)
+
+This is a base package for [Atom](https://atom.io/) that provides the functionality for other atom packages (see list below) to highlight important things on the editor's scroll bar.
 
 <img width="664" alt="screen shot 2018-06-20 at 21 51 40" src="https://user-images.githubusercontent.com/11520795/41678646-40497f28-74d4-11e8-8625-d043f96e9bb8.png">
 
-That means, in order to get any use out of it, you also need to install one of the packages bellow.
+That means, in order to get any use out of this package, you also need to install one of the packages bellow.
 
 ## Packages powered by Scroll Marker:
 
@@ -62,76 +65,66 @@ This gives you a reference to the scroll-marker API that you can use to add a [`
 
 ## API
 
-### Methods
-<table>
-	<tr>
-		<th>Name</td>
-		<th>Description</td>
-	</tr>
-	<tr>
-		<th>getLayer(editor, name, color)</th>
-		<td>
-			Creates and returns a singleton instance of [`Marker Layer`](#marker-layer). That means there will be only one instance of [`Marker Layer`](#marker-layer) for a given editor/name combination.
-			<br>
-			This [`Marker Layer`](#marker-layer) instance is what you'll use to add/remove markers to the scroll bar. All Markers added to this layer will have the specified color.
+#### getLayer(editor, name, color)
 
-			<br /><br />
+Creates and returns a singleton instance of [`Marker Layer`](#marker-layer). That means there will be only one instance of [`Marker Layer`](#marker-layer) for a given editor/name combination.
 
-			**_Arguments:_**
-			<ul>
-				<li>
-					**_editor_** - an editor instance, usually acquired by using [observeTextEditors](https://atom.io/docs/api/v1.28.0/Workspace#instance-observeTextEditors)
-				</li>
-				<li>
-					**_name_** - a unique name for the layer, usually the name of your package
-				</li>
-				<li>
-					**_color_** - CSS color that you want the markers added to this layer to be
-				</li>
-			</ul>
-		</td>
-	</tr>
-</table>
+This [`Marker Layer`](#marker-layer) instance is what you'll use to add/remove markers to the scroll bar. All Markers added to this layer will have the specified color.
+
+**_Arguments:_**
+ - **_editor_** - an editor instance, usually acquired by using [observeTextEditors](https://atom.io/docs/api/v1.28.0/Workspace#instance-observeTextEditors)
+ - **_name_** - a unique name for the layer, usually the name of your package
+ - **_color_** - CSS color that you want the markers added to this layer to be
+
+**_Example:_**
+```js
+consumeScrollMarker(api) {
+	atom.workspace.observeTextEditors(function(editor) {
+		const layer = api.getLayer(editor, "example-layer", "#00ff00");
+		// ...
+	});
+}
+```
 
 ## Marker Layer
 
-### Methods
-<table>
-	<tr>
-		<th>Name</td>
-		<th>Description</td>
-	</tr>
+#### addMarker(line)
 
-	<tr>
-		<th>addMarker(line)</th>
-		<td>
-			Adds a marker on the marker layer at the specified line.
+Adds a marker on the marker layer at the specified line.
 
-			<br /><br />
 
-			**_Arguments:_**
-			<ul>
-				<li>
-					**line** - line number you want to add the marker to. Note that the first line number is 0.
-				</li>
-			</ul>
-		</td>
-	</tr>
+**_Arguments:_**
+ - **line** - line number you want to add the marker to. Note that the first line number is 0.
 
-	<tr>
-		<th>syncToMarkerLayer(markerLayer)</th>
-		<td>
-			Sync the markers on the scroll marker layer with the markers on a [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer)
+**_Example:_**
+```js
+consumeScrollMarker(api) {
+	atom.workspace.observeTextEditors(function(editor) {
+		const layer = api.getLayer(editor, "example-layer", "#00ff00");
+		layer.addMarker(2);
+	});
+}
+```
 
-			<br /><br />
+---
 
-			**_Arguments:_**
-			<ul>
-				<li>
-					**markerLayer** - an instance of [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer) that is usually used to highlight text in the editor
-				</li>
-			</ul>
-		</td>
-	</tr>
+#### syncToMarkerLayer(markerLayer)
 
-</table>
+Sync the markers on the scroll marker layer with the markers on a [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer)
+
+**_Arguments:_**
+ - **markerLayer** - an instance of [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer) that is usually used to highlight text in the editor
+
+**_Example:_**
+```js
+consumeScrollMarker(api) {
+	atom.workspace.observeTextEditors(function(editor) {
+		const scrollLayer = api.getLayer(editor, "example-layer", "#00ff00");
+		const searchLayer = findService.resultsMarkerLayerForTextEditor(editor);
+
+		scrollLayer.syncToMarkerLayer(searchLayer);
+	});
+}
+```
+
+For a detailed `syncToMarkerLayer` working example you could checkout the [find-scroll-marker](https://github.com/surdu/find-scroll-marker) source code.
