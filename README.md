@@ -112,7 +112,7 @@ consumeScrollMarker(api) {
 Sync the markers on the scroll marker layer with the markers on a [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer).
 
 **_Arguments:_**
- - **markerLayer** - an instance of [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer) that is used to highlight text in the editor
+ - **markerLayer** - an instance of [DisplayMarkerLayer](https://atom.io/docs/api/v1.9.5/DisplayMarkerLayer) that is usually used to highlight text in the editor
 
 **_Example:_**
 ```js
@@ -128,4 +128,3 @@ consumeScrollMarker(api) {
 ```
 
 For a detailed `syncToMarkerLayer` working example you can checkout the [find-scroll-marker](https://github.com/surdu/find-scroll-marker) source code.
-
