@@ -5,7 +5,9 @@
 
 This is a base package for [Atom](https://atom.io/) that provides the functionality for other atom packages (see list below) to highlight important things on the editor's scroll bar.
 
-<img width="664" alt="screen shot 2018-06-20 at 21 51 40" src="https://user-images.githubusercontent.com/11520795/41678646-40497f28-74d4-11e8-8625-d043f96e9bb8.png">
+<p align="center">
+  <img width="664" alt="screen shot 2018-06-20 at 21 51 40" src="https://user-images.githubusercontent.com/11520795/41678646-40497f28-74d4-11e8-8625-d043f96e9bb8.png">
+</p>
 
 That means, in order to get any use out of this package, you also need to install one of the packages bellow.
 
