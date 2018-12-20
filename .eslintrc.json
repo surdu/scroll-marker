@@ -18,7 +18,8 @@
 
 	"globals": {
 		"atom": false,
-		"com": false
+		"com": false,
+		"localStorage": false
 	},
 
 	"rules": {
