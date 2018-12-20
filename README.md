@@ -13,11 +13,11 @@ That means, in order to get any use out of this package, you also need to instal
 
 ## Packages powered by Scroll Marker:
 
-Name | What it highlights
------|------------------
-[`find-scroll-marker`](https://atom.io/packages/find-scroll-marker) | Search results.
-[`lint-scroll-marker`](https://atom.io/packages/lint-scroll-marker) | Lint errors found by [linter](https://atom.io/packages/linter), [atom-ide-ui](https://atom.io/packages/atom-ide-ui) or [nuclide](https://atom.io/packages/nuclide).
-[`highlight-selected`](https://atom.io/packages/highlight-selected) | Occurrences of the selected text. Scrollbar highlight requires enabling in the package settings.
+Name | What it highlights | Install in Atom
+-----|--------------------|----------------
+[`find-scroll-marker`](https://atom.io/packages/find-scroll-marker) | Search results. | [![Install in Atom](https://user-images.githubusercontent.com/11520795/50256577-94d45d00-03ff-11e9-9f22-6e5c1b943686.png)](atom://settings-view/show-package?package=find-scroll-marker)
+[`lint-scroll-marker`](https://atom.io/packages/lint-scroll-marker) | Lint errors found by [linter](https://atom.io/packages/linter), [atom-ide-ui](https://atom.io/packages/atom-ide-ui) or [nuclide](https://atom.io/packages/nuclide). | [![Install in Atom](https://user-images.githubusercontent.com/11520795/50256577-94d45d00-03ff-11e9-9f22-6e5c1b943686.png)](atom://settings-view/show-package?package=lint-scroll-marker)
+[`highlight-selected`](https://atom.io/packages/highlight-selected) | Occurrences of the selected text. Scrollbar highlight requires enabling in the package settings. | [![Install in Atom](https://user-images.githubusercontent.com/11520795/50256577-94d45d00-03ff-11e9-9f22-6e5c1b943686.png)](atom://settings-view/show-package?package=highlight-selected)
 
 ## Developer documentation
 
