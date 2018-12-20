@@ -1,7 +1,7 @@
 {
   "name": "scroll-marker",
   "main": "./lib/main",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Provides annotation functionality for the scroll bar",
   "scripts": {
     "spellcheck": "npx yaspeller '{,!(node_modules)/**/}*.md' --config yaspeller.json --ignore-urls",
