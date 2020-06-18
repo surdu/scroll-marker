@@ -17,9 +17,9 @@ Name | What it highlights | Marker Layer Class
 [`lint-scroll-marker`](https://atom.io/packages/lint-scroll-marker) | Lint errors found by [linter](https://atom.io/packages/linter), [atom-ide-ui](https://atom.io/packages/atom-ide-ui) or [nuclide](https://atom.io/packages/nuclide). | `.link-scroll-marker-warn`, `.lint-scroll-marker-error` or `.link-scroll-marker-info`
 [`highlight-selected`](https://atom.io/packages/highlight-selected) | Occurrences of the selected text. Scrollbar highlight requires enabling in the package settings. | `.highlight-selected-selected-marker-layer`
 
-## Customise marker color
+## Customize marker color
 
-If you would like to customise the color of the marker for one of the scroll marker types, place the following CSS in you Atom stylesheet:
+If you would like to customize the color of the marker for one of the scroll marker types, place the following CSS in you Atom stylesheet:
 
 ```css
 <marker-layer-class> .scroll-marker {
@@ -55,7 +55,7 @@ The first thing that is needed is declare in your plugin's `package.json` that y
 }
 ```
 
-Then, in your main js file (in this case `lib/index.js`) add the `consumeScrollMarker` method:
+Then, in your main JS file (in this case `lib/index.js`) add the `consumeScrollMarker` method:
 
 ```js
 module.exports = {
