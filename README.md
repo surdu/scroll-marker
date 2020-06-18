@@ -11,11 +11,23 @@ That means, in order to get any use out of this package, you also need to instal
 
 ## Packages powered by Scroll Marker:
 
-Name | What it highlights
------|------------------
-[`find-scroll-marker`](https://atom.io/packages/find-scroll-marker) | Search results.
-[`lint-scroll-marker`](https://atom.io/packages/lint-scroll-marker) | Lint errors found by [linter](https://atom.io/packages/linter), [atom-ide-ui](https://atom.io/packages/atom-ide-ui) or [nuclide](https://atom.io/packages/nuclide).
-[`highlight-selected`](https://atom.io/packages/highlight-selected) | Occurrences of the selected text. Scrollbar highlight requires enabling in the package settings.
+Name | What it highlights | Marker Layer Class
+-----|--------------------|-------------------
+[`find-scroll-marker`](https://atom.io/packages/find-scroll-marker) | Search results. | `.find-marker-layer`
+[`lint-scroll-marker`](https://atom.io/packages/lint-scroll-marker) | Lint errors found by [linter](https://atom.io/packages/linter), [atom-ide-ui](https://atom.io/packages/atom-ide-ui) or [nuclide](https://atom.io/packages/nuclide). | `.link-scroll-marker-warn`, `.lint-scroll-marker-error` or `.link-scroll-marker-info`
+[`highlight-selected`](https://atom.io/packages/highlight-selected) | Occurrences of the selected text. Scrollbar highlight requires enabling in the package settings. | `.highlight-selected-selected-marker-layer`
+
+## Customise marker color
+
+If you would like to customise the color of the marker for one of the scroll marker types, place the following CSS in you Atom stylesheet:
+
+```css
+<marker-layer-class> .scroll-marker {
+	background-color: <css-color> !important;
+}
+```
+
+Substitute `<marker-layer-class>` with one of the marker layer classes from the table above and `<css-color>` with a valid [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 
 ## Developer documentation
 
