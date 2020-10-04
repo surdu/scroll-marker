@@ -1,7 +1,7 @@
 {
   "name": "scroll-marker",
   "main": "./lib/main",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Provides annotation functionality for the scroll bar",
   "scripts": {
     "spellcheck": "npx --package markdown-spellcheck mdspell -rnax  --en-us '**/*.md' '!**/node_modules/**/*.md'",
