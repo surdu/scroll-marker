@@ -6,24 +6,34 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  CI: true
+
 jobs:
-  build:
-
-    runs-on: macos-latest
-
+  Test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        channel: [stable, beta]
+    runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
 
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
+    - uses: UziTech/action-setup-atom@v1
+      with:
+        channel: ${{ matrix.channel }}
 
-      - name: Install Dependencies
-        run: npm install
+    - name: Atom version
+      run: atom -v
 
-      - name: Spellchecking
-        run: npm test
+    - name: APM version
+      run: apm -v
 
-      - name: Running specs
-        run: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+    - name: Install dependencies
+      run: apm install
+
+    - name: Run linter & spellcheck
+      run: npm test
+
+    - name: Run tests
+      run: atom --test spec
