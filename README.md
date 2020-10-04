@@ -1,6 +1,6 @@
 # Scroll Marker
 
-[![Build Status](https://travis-ci.org/surdu/scroll-marker.svg?branch=master)](https://travis-ci.org/surdu/scroll-marker)
+[![Actions Status](https://github.com/surdu/scroll-marker/workflows/Tests/badge.svg)](https://github.com/surdu/scroll-marker/actions)
 [![dependencies Status](https://david-dm.org/surdu/scroll-marker/status.svg)](https://david-dm.org/surdu/scroll-marker)
 [![Buy me a coffee](https://raw.githubusercontent.com/surdu/surdu/master/ko-fi.svg)](https://ko-fi.com/surdu)
 
