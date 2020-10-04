@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/surdu/scroll-marker.svg?branch=master)](https://travis-ci.org/surdu/scroll-marker)
 [![dependencies Status](https://david-dm.org/surdu/scroll-marker/status.svg)](https://david-dm.org/surdu/scroll-marker)
+[![Buy me a coffee](https://raw.githubusercontent.com/surdu/surdu/master/ko-fi.svg)](https://ko-fi.com/surdu)
 
 This is a base package for [Atom](https://atom.io/) that provides the functionality for other atom packages (see list below) to highlight important things on the editor's scroll bar.
 
